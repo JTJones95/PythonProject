@@ -1,5 +1,5 @@
 import numpy as np
-
+import matplotlib.pyplot as plt
 from calculate import Calculate
 
 class Table(object):
@@ -8,3 +8,8 @@ class Table(object):
             self.state = np.random.randint(2, size = size)
         self.calculate = Calculate(self)
         self.iteration = 0
+    def animate(self):
+        plt.title("It's a thing!")
+        plt.plot(self.state)
+        plt.ylabel("Numbers!")
+        plt.show()
