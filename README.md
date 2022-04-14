@@ -1,4 +1,6 @@
 # PythonProject
-Writing game of life in Python in as few lines as possible
+Conway's game of life in 50 lines of Python.
 
-Will be using online resources to help with the math involved.
+Runs through 600 iterations (~30 seconds).
+
+Utilizes matplotlib for visuals and numpy to generate a random start.
