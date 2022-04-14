@@ -9,7 +9,13 @@ class Table(object):
         self.calculate = Calculate(self)
         self.iteration = 0
     def animate(self):
-        plt.title("It's a thing!")
-        plt.plot(self.state)
-        plt.ylabel("Numbers!")
-        plt.show()
+        i = self.iteration
+        im = None
+        plt.title("Game of Life")
+        while i < 50:
+            plt.ion()
+            im = plt.imshow(self.state, vmin = 0, vmax = 1, cmap = plt.cm.gray)
+            i += 1
+            print(i)
+            plt.pause(0.05)
+            yield self
